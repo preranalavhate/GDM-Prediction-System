@@ -52,3 +52,23 @@ The Gestational Diabetes Prediction System is a full-stack web application desig
 6. Doctor reviews and provides medical recommendations
 
 ---
+
+## 📸 Project Screenshots
+
+### 🔐 Authentication
+![Login Page](screenshots/Login_Page.png)
+![Register Page](screenshots/Register_Page.png)
+
+### 👩‍⚕️ Doctor Dashboard
+![Doctor Dashboard](screenshots/Doctor_Dashboard.png)
+![Assessment Details](screenshots/Assesment_Details.png)
+
+### 👩‍🍼 Patient Flow
+![Patient Dashboard](screenshots/Patient_Dashboard.png)
+![Select Doctor](screenshots/Select_Doctor.png)
+![Assessment Form](screenshots/Assesment_Form.png)
+
+### 🤖 ML Prediction Result
+![Prediction Result](screenshots/Prediction_Result.png)
+
+---
