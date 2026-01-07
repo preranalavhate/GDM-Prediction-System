@@ -1,0 +1,154 @@
+{
+  "version": "fixed_v20251211_202814",
+  "timestamp": "20251211_202814",
+  "problem_type": "classification",
+  "target_variable": "Class Label(GDM /Non GDM)",
+  "feature_columns": [
+    "Age",
+    "No of Pregnancy",
+    "Gestation in previous Pregnancy",
+    "BMI",
+    "HDL",
+    "Family History",
+    "unexplained prenetal loss",
+    "Large Child or Birth Default",
+    "PCOS",
+    "Sys BP",
+    "Dia BP",
+    "OGTT",
+    "Hemoglobin",
+    "Sedentary Lifestyle",
+    "Prediabetes",
+    "BMI_Risk_Score",
+    "OGTT_Risk_Score",
+    "BMI_OGTT_Risk",
+    "Age_BMI_Interaction",
+    "BP_Ratio",
+    "Pulse_Pressure",
+    "Mean_Arterial_Pressure",
+    "Hypertensive",
+    "Comprehensive_Risk_Score",
+    "High_Risk_BMI",
+    "High_Risk_OGTT",
+    "Advanced_Age",
+    "BMI_log",
+    "OGTT_log"
+  ],
+  "n_features": 29,
+  "dataset_shape": [
+    2000,
+    17
+  ],
+  "train_shape": [
+    1600,
+    29
+  ],
+  "test_shape": [
+    400,
+    29
+  ],
+  "class_balance_original": {
+    "1": 1046,
+    "0": 954
+  },
+  "class_balance_method": "smote",
+  "optimal_threshold": 0.13,
+  "best_model": "LogisticRegression",
+  "best_accuracy": 0.7525,
+  "best_f1": 0.7591240875912408,
+  "best_precision": 0.7722772277227723,
+  "best_recall": 0.7464114832535885,
+  "best_roc_auc": 0.8070843458002455,
+  "all_model_scores": {
+    "BalancedRandomForest": {
+      "cv_f1_mean": 0.7378899872633833,
+      "cv_f1_std": 0.011759898551474553,
+      "test_accuracy": 0.735,
+      "test_f1": 0.7451923076923077,
+      "test_precision": 0.748792270531401,
+      "test_recall": 0.7416267942583732,
+      "test_roc_auc": 0.7918284526165484
+    },
+    "XGBoost": {
+      "cv_f1_mean": 0.7413318512302056,
+      "cv_f1_std": 0.015377854741850076,
+      "test_accuracy": 0.745,
+      "test_f1": 0.7559808612440191,
+      "test_precision": 0.7559808612440191,
+      "test_recall": 0.7559808612440191,
+      "test_roc_auc": 0.8000450913099025
+    },
+    "LogisticRegression": {
+      "cv_f1_mean": 0.7361533648836375,
+      "cv_f1_std": 0.01531322491709448,
+      "test_accuracy": 0.7525,
+      "test_f1": 0.7591240875912408,
+      "test_precision": 0.7722772277227723,
+      "test_recall": 0.7464114832535885,
+      "test_roc_auc": 0.8070843458002455
+    },
+    "SVM": {
+      "cv_f1_mean": 0.7125661331953947,
+      "cv_f1_std": 0.019794815981052788,
+      "test_accuracy": 0.73,
+      "test_f1": 0.7352941176470589,
+      "test_precision": 0.7537688442211056,
+      "test_recall": 0.7177033492822966,
+      "test_roc_auc": 0.7956361632305419
+    },
+    "GradientBoosting": {
+      "cv_f1_mean": 0.7238331263553698,
+      "cv_f1_std": 0.011184646949300327,
+      "test_accuracy": 0.725,
+      "test_f1": 0.7342995169082126,
+      "test_precision": 0.7414634146341463,
+      "test_recall": 0.7272727272727273,
+      "test_roc_auc": 0.7907763220521555
+    }
+  },
+  "ensemble_results": {
+    "models": [
+      "BalancedRandomForest",
+      "XGBoost",
+      "LogisticRegression",
+      "SVM",
+      "GradientBoosting"
+    ],
+    "accuracy": 0.7375,
+    "f1": 0.7494033412887828,
+    "precision": 0.7476190476190476,
+    "recall": 0.7511961722488039,
+    "roc_auc": 0.7384077757458855,
+    "threshold": 0.13
+  },
+  "saved_models": {
+    "BalancedRandomForest": "balancedrandomforest_model.pkl",
+    "XGBoost": "xgboost_model.pkl",
+    "LogisticRegression": "logisticregression_model.pkl",
+    "SVM": "svm_model.pkl",
+    "GradientBoosting": "gradientboosting_model.pkl",
+    "Ensemble": "ensemble_model.pkl"
+  },
+  "critical_features": [
+    "BMI",
+    "OGTT",
+    "Age",
+    "Family History",
+    "PCOS"
+  ],
+  "fixes_applied": [
+    "Used classification models instead of regression",
+    "Applied class imbalance handling with SMOTE/class weights",
+    "Enhanced BMI and OGTT feature engineering",
+    "Implemented stratified train-test split",
+    "Added threshold optimization for ensemble",
+    "Comprehensive cross-validation",
+    "Feature importance analysis"
+  ],
+  "validation": {
+    "predicts_both_classes": true,
+    "f1_score_threshold": true,
+    "recall_threshold": true,
+    "precision_threshold": true
+  }
+}

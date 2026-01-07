@@ -1,0 +1,53 @@
+{
+  "version": "v20251211_215153",
+  "timestamp": "20251211_215153",
+  "problem_type": "classification",
+  "target_variable": "Class Label(GDM /Non GDM)",
+  "feature_columns": [
+    "Case Number",
+    "Age",
+    "No of Pregnancy",
+    "Gestation in previous Pregnancy",
+    "BMI",
+    "HDL",
+    "Family History",
+    "unexplained prenetal loss",
+    "Large Child or Birth Default",
+    "PCOS",
+    "Sys BP",
+    "Dia BP",
+    "OGTT",
+    "Hemoglobin",
+    "Sedentary Lifestyle",
+    "Prediabetes"
+  ],
+  "dataset_shape": [
+    3525,
+    17
+  ],
+  "train_shape": [
+    3444,
+    16
+  ],
+  "test_shape": [
+    705,
+    16
+  ],
+  "test_size": 0.2,
+  "random_state": 42,
+  "final_score": 0.9546099290780142,
+  "score_metric": "accuracy",
+  "saved_models": {
+    "RandomForest": "randomforest_model.pkl",
+    "LogisticRegression": "logisticregression_model.pkl",
+    "KNN": "knn_model.pkl",
+    "XGBoost": "xgboost_model.pkl",
+    "Ensemble": "ensemble_model.pkl"
+  },
+  "python_packages": {
+    "pandas": "2.2.2",
+    "numpy": "2.0.2",
+    "scikit-learn": "1.3.0",
+    "xgboost": "1.7.0"
+  }
+}
